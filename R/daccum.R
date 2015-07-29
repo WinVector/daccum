@@ -75,22 +75,3 @@ unwrap <- function(collector) {
 }
 
 
-mkRow <- function(nCol) {
-  x <- as.list(rnorm(nCol))
-  # make row mixed types by changing first column to string
-  x[[1]] <- ifelse(x[[1]]>0,'pos','neg')
-  names(x) <- paste('x',seq_len(nCol),sep='.')
-  x
-}
-
-mkFrameCollect <- function(nRow,nCol) {
-  collector <- mkColletor()
-  for(i in seq_len(nRow)) {
-    ri <- mkRow(nCol)
-    collect(collector,ri)
-  }
-  unwrap(collector)
-}
-
-
-
