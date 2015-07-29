@@ -1,0 +1,2 @@
+
+Simple example library on how to incrementally collect data rows in R.  In practice you would use something like data.table.  See the comments and linked material in http://www.win-vector.com/blog/2015/07/efficient-accumulation-in-r/ for details.
