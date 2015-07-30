@@ -64,13 +64,13 @@ mkColletor <- function() {
 #' @param collector from mkColletor()
 #' @newdata list or data frame of new data rows
 #' @return an efficient incremental collector of data
-collect <- function(collector,newdata) {
+collectRows <- function(collector,newdata) {
    collector(1,newdata)
 }
 
 #' @param collector from mkColletor()
 #' @return data frame
-unwrap <- function(collector) {
+unwrapRows <- function(collector) {
    collector(2)
 }
 
